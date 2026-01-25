@@ -1,5 +1,5 @@
 {% set name = "rstream" %}
-{% set version = "0.40.0" %}
+{% set version = "0.40.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rstream-{{ version }}.tar.gz
-  sha256: 362b1e56f395ae7de296006bcda8acafff1ace8ea75d0c390bb01bac22c95014
+  sha256: 33015d543b2598837933e0959265a98d8ce0a41ef8906a9c7b62d1a526d5f993
 
 build:
   noarch: python
