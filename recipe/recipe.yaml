@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: rstream
-  version: "1.0.1"
+  version: "1.1.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/rstream-${{ version }}.tar.gz
-  sha256: e6537f2e65e9159566ebbacba8fb6e745abbeddc87de17ce002645ae1c335d60
+  sha256: ab9bbfe630b871fedf5261309073f4fccda48205ee73e3989a372d392a9d3132
 
 build:
   number: 0
@@ -24,16 +24,18 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - requests >=2.31.0,<3.0.0
-    - mmh3 >=5.2.0,<6.0.0
-    - typing_extensions >=4.11.0,<5.0.0
+    - requests >=2.32.4
+    - mmh3 >=5.2.0
+    - typing_extensions >=4.15.0
 
 tests:
   - python:
       imports:
         - rstream
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: A python client for RabbitMQ Streams
