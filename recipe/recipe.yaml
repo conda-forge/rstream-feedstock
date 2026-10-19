@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: rstream
-  version: "1.1.0"
+  version: "1.1.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/rstream-${{ version }}.tar.gz
-  sha256: ab9bbfe630b871fedf5261309073f4fccda48205ee73e3989a372d392a9d3132
+  sha256: d7acd26bfde3f23403f0c2b1fa1bcbd794038b398dc897b30bdc0e7a8ff645bd
 
 build:
   number: 0
